@@ -1,0 +1,6 @@
+<div *ngFor="let data of items; let i = index">
+    <!-- @for(let data of items; track data) {
+        } -->
+        <div>{{data}}</div>
+        <button (click)="deleteStr(i)">Delete str</button>
+</div>
