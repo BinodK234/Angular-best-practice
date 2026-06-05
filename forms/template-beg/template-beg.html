@@ -1,0 +1,14 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <input type="email" name="email" ngModel placeholder="Email">
+    <input type="password" name="password" ngModel placeholder="password">
+    <button type="submit">Submit</button>
+</form>
+
+<div>
+   <h2>User Profile</h2>
+   <p><strong>Name: </strong>{{ name }}</p>
+   <p><strong>Email: </strong>{{ email }}</p>
+
+   <input [(ngModel)]="newName" type="text" placeholder="Enter New Name">
+    <button (click)="changeName()">Change Name</button>
+</div>
