@@ -1,1 +1,32 @@
-<p>template-forms works!dewgfgvfdgvfv yegefu gtug</p>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    Email: <input type="text" [(ngModel)]="email" name="email" ngModel="email" #emailControl="ngModel" required minlength="5">
+    @if(emailControl.touched && emailControl.invalid) {
+        <div style="color: red;">Email is required</div>
+    }
+    @if(emailControl.dirty && emailControl.invalid) {
+        <div style="color: red;">invalid Email</div>
+    }
+    @if(emailControl.errors?.['minLength']) {
+        <div style="color: red;">Minimum 5 character is required</div>
+    }
+    <br><br>
+    Password: <input type="password" [(ngModel)]="password" name="password" #pwdControl="ngModel" required minlength="5">
+    @if(pwdControl.invalid && pwdControl.touched) {
+         <div style="color: red;">Password is required</div>
+    }
+    @if(pwdControl.errors?.['minLength']){
+         <div style="color: red;">Minimum 5 Charcters required</div>
+    }
+    {{ emailControl.errors | json }}
+    <button [disabled]="loginForm.invalid">Submit</button>
+</form>
+{{email}}
+{{password}}
+{{ loginForm.value | json }}  
+ <!-- { "email": "", "password": "" } -->
+
+ Form Valid: {{ loginForm.valid }}
+
+<br>
+
+Form Invalid: {{ loginForm.invalid }}
