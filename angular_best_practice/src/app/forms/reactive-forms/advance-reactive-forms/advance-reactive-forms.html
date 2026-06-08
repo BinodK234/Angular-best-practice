@@ -1,0 +1,25 @@
+<form [formGroup]="registerForm" >
+    userName: <input type="text" formControlName="userName">
+    email: <input type="text" formControlName="email">
+    Password: <input type="text" formControlName="password">
+</form>
+<button (click)="patchValueForm()">Patch Value</button>
+<button (click)="setValueForm()">Set Value</button>
+<!-- Valuechanges -->
+ <input type="text" [formControl]="search"> 
+
+ <!-- Status changes -->
+
+ <input type="text" [formControl]="email">
+
+
+ <div><h1>this is practicing of enable, disable, showValue and showRowValue </h1></div>
+
+ <form [formGroup]="loginForm">
+    Email: <input type="text" formControlName="email">
+    Password: <input type="text" formControlName="password">
+ </form>
+ <button (click)="disableEmail()">Disable Email</button>
+ <button (click)="enableEmail()">Enable Email</button>
+ <button (click)="showValue()">Show Value</button>
+ <button (click)="showRowValue()">Show RowValue</button>

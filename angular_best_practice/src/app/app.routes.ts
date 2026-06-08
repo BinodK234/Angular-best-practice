@@ -6,6 +6,7 @@ import { ParentComponent } from './component-communication/parent-component/pare
 import { TemplateForms } from './forms/template-forms/template-forms'
 import { ReactiveForms } from './forms/reactive-forms/reactive-forms';
 import { FormGroupC } from './forms/reactive-forms/form-group/form-group';
+import { AdvanceReactiveForms } from './forms/reactive-forms/advance-reactive-forms/advance-reactive-forms';
 
 export const routes: Routes = [
     {path: 'take', component: TakeOperator},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path: 'component-communication', component: ParentComponent},
     {path: 'template-forms', component: TemplateForms},
     {path: 'reactive-form', component: ReactiveForms},
-    {path: 'reactive-formGroup', component: FormGroupC}
+    {path: 'reactive-formGroup', component: FormGroupC},
+    {path: 'advance-reactiveForms', component: AdvanceReactiveForms}
 ];
