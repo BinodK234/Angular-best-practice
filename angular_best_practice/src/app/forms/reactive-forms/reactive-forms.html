@@ -1,1 +1,21 @@
-<p>reactive-forms works!</p>
+<!-- FormControl -->
+<form>
+    <input [formControl]="email">
+    @if(email.touched && email.errors?.['email']) {
+        <div style="color: red;">Invalid Email</div>
+    }
+    @if(email.errors?.['required'] && email.invalid && email.touched){
+        <div style="color: red;">Email is Required</div>
+    }
+    <!-- Valid: {{email.valid}}
+    InValid: {{email.invalid}} -->
+    <br><br>
+    User Name: <input type="text" [formControl]="userName">
+    @if(userName.touched && userName.errors?.['required']) {
+        <div style="color: red;">UserName is Require</div>
+    }
+    @if(userName.touched && userName.errors?.['minlength']) {
+        <div style="color: red;">Minimum 5 characters required</div>
+    }
+</form>
+<button (click)="showValue()">Show Value</button>
