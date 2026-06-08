@@ -5,6 +5,7 @@ import { ObservablesComponent }  from './RXJS/observables/observables';
 import { ParentComponent } from './component-communication/parent-component/parent-component';
 import { TemplateForms } from './forms/template-forms/template-forms'
 import { ReactiveForms } from './forms/reactive-forms/reactive-forms';
+import { FormGroupC } from './forms/reactive-forms/form-group/form-group';
 
 export const routes: Routes = [
     {path: 'take', component: TakeOperator},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path: 'observables', component: ObservablesComponent},
     {path: 'component-communication', component: ParentComponent},
     {path: 'template-forms', component: TemplateForms},
-    {path: 'reactive-form', component: ReactiveForms}
+    {path: 'reactive-form', component: ReactiveForms},
+    {path: 'reactive-formGroup', component: FormGroupC}
 ];
